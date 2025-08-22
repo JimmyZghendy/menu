@@ -396,7 +396,7 @@ export default function ZebdineFestival() {
               <h1 className="text-[#D4AF37] font-bold text-lg">
                 {language === "ar"
                   ? "مهرجان زبدين ٢٠٢٥"
-                  : "Saint Jean Zebdine Festival 2025"}
+                  : "Festival Zebdine 2025"}
               </h1>
             </div>
 
