@@ -610,7 +610,7 @@ export default function ZebdineFestival() {
                 {language === "ar" ? "الموقع" : "Location"}
               </h3>
               <p className="text-lg">
-                {language === "ar" ? "زبدين، لبنان" : "Zabdine, Lebanon"}
+                {language === "ar" ? "زبدين، لبنان" : "Zebdine, Lebanon"}
               </p>
             </div>
 
