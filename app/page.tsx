@@ -620,22 +620,24 @@ export default function ZebdineFestival() {
               <h3 className="text-xl font-semibold mb-2">
                 {language === "ar" ? "للتواصل" : "Contact"}
               </h3>
-              <p className="text-lg">+961 XX XXX XXX</p>
+              <p className="text-lg">+961 71 755 803</p>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-2">
                 {language === "ar" ? "تابعونا" : "Follow Us"}
               </h3>
-              <p className="text-lg">@ZebdineFestival</p>
+              <p className="text-lg">
+                Paroise Saint Jean Baptiste Zebdine Jbeil
+              </p>
             </div>
           </div>
 
           <div className="border-t border-[#D4AF37] pt-6">
             <p className="text-sm opacity-80">
               {language === "ar"
-                ? "© ٢٠٢٥ مهرجان زبدين. جميع الحقوق محفوظة."
-                : "© 2025 Zebdine Festival. All rights reserved."}
+                ? "© ٢٠٢٥ رعية مار يوحنا المعمدان - زبدين. جميع الحقوق محفوظة."
+                : "© 2025 Paroise Saint Jean Baptiste Zebdine Jbeil. All rights reserved."}
             </p>
           </div>
         </div>
