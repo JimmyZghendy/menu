@@ -394,9 +394,7 @@ export default function ZebdineFestival() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <h1 className="text-[#D4AF37] font-bold text-lg">
-                {language === "ar"
-                  ? "مهرجان زبدين ٢٠٢٥"
-                  : "Festival Zebdine 2025"}
+                {language === "ar" ? "قائمة طعام" : "Menu"}
               </h1>
             </div>
 
