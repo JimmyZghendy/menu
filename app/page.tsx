@@ -333,7 +333,7 @@ const categories = [
   {
     id: "sandwiches",
     nameAr: "سندويش",
-    nameEn: "Sandwiches",
+    nameEn: "Sandwiches/Platters/Cold Meza",
     icon: Sandwich,
     color: "bg-[#9A1F1A]",
   },
