@@ -19,6 +19,7 @@ import {
   ShoppingBag,
   Languages,
   Filter,
+  Menu,
 } from "lucide-react";
 
 // Menu data with Arabic and English
@@ -357,6 +358,7 @@ export default function ZebdineFestival() {
   const [language, setLanguage] = useState<"ar" | "en">("en");
   const [activeSection, setActiveSection] = useState("home");
   const [filters, setFilters] = useState<Record<string, string>>({});
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
@@ -468,7 +470,6 @@ export default function ZebdineFestival() {
       className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50"
       dir={language === "ar" ? "rtl" : "ltr"}
     >
-      {/* Fixed Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#9A1F1A] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -478,6 +479,7 @@ export default function ZebdineFestival() {
               </h1>
             </div>
 
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
               <button
                 onClick={() => scrollToSection("home")}
@@ -515,15 +517,94 @@ export default function ZebdineFestival() {
               </button>
             </div>
 
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setLanguage(language === "ar" ? "en" : "ar")}
-              className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#9A1F1A]"
-            >
-              <Languages className="h-4 w-4 mr-1" />
-              {language === "ar" ? "EN" : "عربي"}
-            </Button>
+            {/* Mobile Navigation */}
+            <div className="flex items-center space-x-2 md:hidden relative">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setLanguage(language === "ar" ? "en" : "ar")}
+                className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#9A1F1A]"
+              >
+                <Languages className="h-4 w-4 mr-1" />
+                {language === "ar" ? "EN" : "عربي"}
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMobileMenuOpen((v) => !v)}
+                className="text-white hover:text-[#D4AF37] hover:bg-transparent"
+              >
+                <Menu className="h-6 w-6" />
+              </Button>
+
+              {isMobileMenuOpen && (
+                <div className="absolute right-0 top-10 w-[300px] bg-[#9A1F1A] border border-[#D4AF37] rounded-md shadow-lg p-6 z-50">
+                  <div className="flex flex-col space-y-6">
+                    <button
+                      onClick={() => {
+                        scrollToSection("home");
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`text-left text-white hover:text-[#D4AF37] transition-colors text-lg ${
+                        activeSection === "home" ? "text-[#D4AF37]" : ""
+                      }`}
+                    >
+                      {language === "ar" ? "الرئيسية" : "Home"}
+                    </button>
+
+                    <div className="space-y-4">
+                      <h3 className="text-[#D4AF37] font-semibold text-lg">
+                        {language === "ar" ? "الفئات" : "Categories"}
+                      </h3>
+                      {categories.map((category) => (
+                        <button
+                          key={category.id}
+                          onClick={() => {
+                            scrollToSection(category.id);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={`block text-left text-white hover:text-[#D4AF37] transition-colors pl-4 ${
+                            activeSection === category.id
+                              ? "text-[#D4AF37]"
+                              : ""
+                          }`}
+                        >
+                          {language === "ar"
+                            ? category.nameAr
+                            : category.nameEn}
+                        </button>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        scrollToSection("contact");
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`text-left text-white hover:text-[#D4AF37] transition-colors text-lg ${
+                        activeSection === "contact" ? "text-[#D4AF37]" : ""
+                      }`}
+                    >
+                      {language === "ar" ? "اتصل بنا" : "Contact"}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop Language Button */}
+            <div className="hidden md:block">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setLanguage(language === "ar" ? "en" : "ar")}
+                className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#9A1F1A]"
+              >
+                <Languages className="h-4 w-4 mr-1" />
+                {language === "ar" ? "EN" : "عربي"}
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
