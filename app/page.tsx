@@ -301,6 +301,30 @@ const menuData = {
       type: "meat",
       vegetarian: false,
     },
+    {
+      id: 35,
+      nameAr: " ش عدد 1 لحمة مشوية",
+      nameEn: "Grilled Meat Shish",
+      price: 400000,
+      type: "meat",
+      vegetarian: false,
+    },
+    {
+      id: 36,
+      nameAr: "كفتة مشوية ش عدد 1",
+      nameEn: "Grilled Kafta Shish",
+      price: 400000,
+      type: "meat",
+      vegetarian: false,
+    },
+    {
+      id: 37,
+      nameAr: " ش عدد 1 طاووق",
+      nameEn: "Tawook Shish",
+      price: 300000,
+      type: "chicken",
+      vegetarian: false,
+    },
   ],
   argileh: [
     {
