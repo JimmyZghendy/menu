@@ -498,9 +498,9 @@ export default function ZebdineFestival() {
       case "argileh":
         return [
           { value: "all", labelAr: "الكل", labelEn: "All" },
-          { value: "fruit", labelAr: "فواكه", labelEn: "Fruit" },
-          { value: "mint", labelAr: "نعناع", labelEn: "Mint" },
-          { value: "mixed", labelAr: "مكس", labelEn: "Mixed" },
+          //  { value: "fruit", labelAr: "فواكه", labelEn: "Fruit" },
+          //  { value: "mint", labelAr: "نعناع", labelEn: "Mint" },
+          // { value: "mixed", labelAr: "مكس", labelEn: "Mixed" },
         ];
       case "dikkan":
         return [
