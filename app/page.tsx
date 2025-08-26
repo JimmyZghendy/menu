@@ -325,6 +325,70 @@ const menuData = {
       type: "chicken",
       vegetarian: false,
     },
+    {
+      id: 38,
+      nameAr: "تبولة ",
+      nameEn: "Tabouleh",
+      price: 400000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 39,
+      nameAr: "لبنة ",
+      nameEn: "Labneh",
+      price: 500000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 40,
+      nameAr: "حمص ",
+      nameEn: "Homos",
+      price: 400000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 41,
+      nameAr: "متبّل باثنجان ",
+      nameEn: "Baba Ganoush",
+      price: 400000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 42,
+      nameAr: "بطاطا مقلية ",
+      nameEn: "French Fries",
+      price: 300000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 43,
+      nameAr: "ترمس ",
+      nameEn: "Termos",
+      price: 150000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 44,
+      nameAr: "جزر ",
+      nameEn: "Carrot",
+      price: 150000,
+      type: "meza",
+      vegetarian: true,
+    },
+    {
+      id: 45,
+      nameAr: "تشكيلة خضرة ",
+      nameEn: "Vegetable Platter",
+      price: 300000,
+      type: "meza",
+      vegetarian: true,
+    },
   ],
   argileh: [
     {
@@ -518,6 +582,7 @@ export default function ZebdineFestival() {
           { value: "vegetarian", labelAr: "نباتي", labelEn: "Vegetarian" },
           { value: "meat", labelAr: "لحمة", labelEn: "Meat" },
           { value: "chicken", labelAr: "دجاج", labelEn: "Chicken" },
+          { value: "meza", labelAr: "مازة باردة ", labelEn: "Mezza" },
         ];
       case "argileh":
         return [
