@@ -269,6 +269,38 @@ const menuData = {
       type: "sauce",
       vegetarian: true,
     },
+    {
+      id: 31,
+      nameAr: " صحن طاووق",
+      nameEn: "Tawook Platter",
+      price: 1000000,
+      type: "chicken",
+      vegetarian: false,
+    },
+    {
+      id: 32,
+      nameAr: " ٢٠٠غ قصبة نية صحن",
+      nameEn: "Kasbe Nayeh Platter 200g",
+      price: 1000000,
+      type: "meat",
+      vegetarian: false,
+    },
+    {
+      id: 33,
+      nameAr: " ٢٠٠غ لحمة نية صحن",
+      nameEn: "Lahmeh Nayeh Platter 200g",
+      price: 1000000,
+      type: "meat",
+      vegetarian: false,
+    },
+    {
+      id: 34,
+      nameAr: " ٢٠٠غ كفتة نية صحن ",
+      nameEn: "Kafta Nayeh Platter 200g",
+      price: 800000,
+      type: "meat",
+      vegetarian: false,
+    },
   ],
   argileh: [
     {
