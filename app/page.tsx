@@ -20,6 +20,7 @@ import {
   Languages,
   Filter,
   Menu,
+  Facebook,
 } from "lucide-react";
 
 // Menu data with Arabic and English
@@ -915,9 +916,17 @@ export default function ZebdineFestival() {
               <h3 className="text-xl font-semibold mb-2">
                 {language === "ar" ? "تابعونا" : "Follow Us"}
               </h3>
-              <p className="text-lg">
-                Paroise Saint Jean Baptiste Zebdine Jbeil
-              </p>
+              <a
+                href="https://www.facebook.com/p/%D8%B1%D8%B9%D9%8A%D8%A9-%D9%85%D8%A7%D8%B1%D9%8A%D9%88%D8%AD%D9%86%D8%A7-%D8%A7%D9%84%D9%85%D8%B9%D9%85%D8%AF%D8%A7%D9%86-%D8%B2%D8%A8%D8%AF%D9%8A%D9%86-Paroisse-St-Jean-Baptiste-Zebdine-Jbeil-100078016429032/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-blue-800 transition-colors"
+              >
+                <Facebook className="w-6 h-6 flex-shrink-0" />
+                <span className="text-lg">
+                  Paroise Saint Jean Baptiste Zebdine Jbeil
+                </span>
+              </a>
             </div>
           </div>
 
