@@ -93,18 +93,6 @@ The application is fully responsive and tested on:
 - `npm run start` - Runs the built app in production mode
 - `npm run lint` - Runs ESLint for code quality
 
-## 🚀 Deployment
-
-This project is deployed on [Vercel](https://vercel.com/). To deploy your own version:
-
-1. Push your code to GitHub
-2. Connect your GitHub repository to Vercel
-3. Vercel will automatically build and deploy your application
-
-### Deployment URL
-
-The application is live at: [your-app-url.vercel.app](https://your-app-url.vercel.app)
-
 ## 🎯 Menu Categories
 
 ### Saj 🥙
@@ -150,10 +138,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+Jimmy Zghendy - [jimmyelzghendy990@gmail.com]
 
-Project Link: [https://github.com/yourusername/restaurant-menu](https://github.com/yourusername/restaurant-menu)
+Project Link: [https://github.com/JimmyZghendy/menu.git]
 
 ---
-
-⭐ If you found this project helpful, please give it a star on GitHub!
