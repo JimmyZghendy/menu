@@ -538,14 +538,16 @@ export default function ZebdineFestival() {
     if (!filter || filter === "all") return items;
 
     return items.filter((item) => {
-      if (filter === "vegetarian") return item.vegetarian;
-      if (filter === "non-vegetarian") return !item.vegetarian;
+      if (filter === "vegetarian" && "vegetarian" in item)
+        return item.vegetarian;
+      if (filter === "non-vegetarian" && "vegetarian" in item)
+        return !item.vegetarian;
       if (filter === "hot" || filter === "cold") return item.type === filter;
       if (filter === "sweet" || filter === "salty") return item.type === filter;
       return (
         item.type === filter ||
-        item.category === filter ||
-        item.flavor === filter
+        ("category" in item && item.category === filter) ||
+        ("flavor" in item && item.flavor === filter)
       );
     });
   };
@@ -862,20 +864,22 @@ export default function ZebdineFestival() {
                       </Badge>
                     </div>
 
-                    {item.vegetarian !== undefined && (
+                    {"vegetarian" in item && (
                       <Badge
-                        variant={item.vegetarian ? "default" : "secondary"}
+                        variant={
+                          (item as any).vegetarian ? "default" : "secondary"
+                        }
                         className={
-                          item.vegetarian
+                          (item as any).vegetarian
                             ? "bg-[#6B8E23] text-white"
                             : "bg-gray-200 text-gray-700"
                         }
                       >
                         {language === "ar"
-                          ? item.vegetarian
+                          ? (item as any).vegetarian
                             ? "نباتي"
                             : "غير نباتي"
-                          : item.vegetarian
+                          : (item as any).vegetarian
                           ? "Vegetarian"
                           : "Non-Vegetarian"}
                       </Badge>
