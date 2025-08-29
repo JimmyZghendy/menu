@@ -152,9 +152,9 @@ const menuData = {
       id: 60,
       nameAr: "XXL",
       nameEn: "XXL",
-      price: 2000000,
+      price: 150000,
       type: "cold",
-      category: "arak",
+      category: "xxl",
     },
     {
       id: 16,
