@@ -149,6 +149,14 @@ const menuData = {
       category: "arak",
     },
     {
+      id: 60,
+      nameAr: "XXL",
+      nameEn: "XXL",
+      price: 2000000,
+      type: "cold",
+      category: "arak",
+    },
+    {
       id: 16,
       nameAr: "عرق بلدي 1/2 قنينة",
       nameEn: "Arak Baladi 1/2 Btl",
